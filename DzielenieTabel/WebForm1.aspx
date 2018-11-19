@@ -28,6 +28,7 @@
                 <SortedDescendingCellStyle BackColor="#D4DFE1" />
                 <SortedDescendingHeaderStyle BackColor="#15524A" />
             </asp:GridView>
+            <asp:Button ID="btnDodajPracownika" runat="server" OnClick="btnDodajPracownika_Click" Text="Dodaj Pracownika" />
         </div>
     </form>
 </body>

@@ -66,5 +66,26 @@ namespace DzielenieTabel
                     break;
             }
         }
+
+        protected void btnDodajPracownika_Click(object sender, EventArgs e)
+        {
+            using(SampleDataContext sdc = new SampleDataContext())
+            {
+                Permament pr = new Permament();
+                pr.Name = "Robert";
+                pr.Gender = "Male";
+                pr.AnuualSalary = 96000;
+
+                Contract ct = new Contract();
+                ct.Name = "Marta";
+                ct.HourlyPay = 50;
+                ct.HoursWorked = 160;
+
+                sdc.Employees2.InsertOnSubmit(pr);
+                sdc.Employees2.InsertOnSubmit(ct);
+                sdc.SubmitChanges();
+            }
+
+        }
     }
 }
